@@ -1,0 +1,16 @@
+.gameboard {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around; }
+  .gameboard .card {
+    flex-basis: 20vw;
+    height: 20vh;
+    background: #000;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    line-height: 20vh; }
+
+/*# sourceMappingURL=style.css.map */

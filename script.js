@@ -6,37 +6,13 @@ var checked = 0;
 // When a card is clicked
 $('.card').on('click', function() {
 
-  if ($(this).hasClass('a')) {
-    $(this).text('A');
-  }
-  
-   
-  
-  if ($('.flipped').hasClass('a') && $(this).hasClass('a')) {
-    $(this).addClass('flipped');
-    alert("Match!");
-    $('.flipped').remove();
-  } else {
-    $(this).addClass('flipped');
-  }
-  
-  
-  
- 
-  
-  
- 
-  
-  up++;
-  if (up > 2) { 
-    up = 0;
-    $('.flipped').removeClass('flipped');
-  } else {
-     checked++;
-    $('.checked').text(checked);
-  }
+
   
   
   
   
 });
+
+// Issues that need to be solved:
+// 1 - clicking on the same card twice produces a "match"
+// 2 - need a better way to add content to cards... I don't want to have 8 if statements if there is a more efficient way to do it

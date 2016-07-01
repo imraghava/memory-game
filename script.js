@@ -1,43 +1,36 @@
-// Tracker Variables
-var up;
-var remaining;
-var found;
-var checked;
-
-// Create a function that creates the cards
-var Card = function(x, y) {
-  this.x = x;
-  this.y = y;
-  this.width = 70;
-};
-
-Card.prototype.drawFaceDown = function() {
-  fill(214, 247,202);
-  strokeWeight(2);
-  rect(this.x, this.y, this.width, this.width, 10);
-  // image(getImage("images/back"), this.x, this.y, this.width, this.width);
-};
-
-
-
+// var numbers = [];
+var num;
+var url_base = 'http://pokeapi.co/api/v2/pokemon/';
+var url;
 var cards = [];
 
-var COLS = 5;
-var ROWS = 4;
 
 
-for (var i = 0; i < COLS; i++) {
-  for (var j = 0; j < ROWS; j++) {
-    cards.push(new CARD( i * 78 + 10, j * 78 + 40))
-  }
-}
+function getCards() {
+  // Generate a list of 10 numbers between 1 and 150
+  for (var i = 0; i < 10; i++) {
+    num = Math.floor(Math.random() * 150) + 1;
 
-for (var i = 0; i < tiles.length; i++) {
-    tiles[i].drawFaceDown();
-}
+    url = url_base + num + '/';
 
-// When a card is clicked
-$('.card').on('click', function() {
+    // API call to Pokemon API
+    $.getJSON(url, function(data) {
+      var pkmnName = data.name;
+      var pkmnSprite = data.sprites.front_default;
+      var pkmnID = data.id;
+
+      var card = {
+          name: pkmnName,
+          img: pkmnSprite,
+          id: pkmnID
+        };
+
+      cards.push(card);
+    });
+
+  } // end for
+} // end function
 
 
-});
+
+

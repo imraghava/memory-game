@@ -1,19 +1,4 @@
-.gameboard {
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around; }
-  .gameboard .card {
-    flex-basis: 20vw;
-    height: 20vh;
-    background: red;
-    color: red;
-    font-size: 3em;
-    text-align: center;
-    line-height: 20vh; }
-  .gameboard .flipped {
-    background: black;
-    color: white; }
+.credit img {
+  max-width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,27 +1,11 @@
 // var numbers = [];
 var num;
 var url = 'http://pokeapi.co/api/v2/pokemon/?limit=150';
-var url;
 var card;
 var deck = [];
 
 
-// API call to Pokemon API
-$.getJSON(url, function(data) {
-  
-  
-  for (var i = 0; i < 10; i++) {
-    // Generate a list of 10 numbers between 1 and 150 and create URLs with them
-    num = Math.floor(Math.random() * 150) + 1;
-    
-    makeCard(num, data);
-     
-  } // end for
-  
-  console.log(deck);
-  
-});
-
+// Function to make a card object
 function makeCard(num, data) {
   var info = data.results[num];
   
@@ -31,6 +15,24 @@ function makeCard(num, data) {
     'pkmnID' : num
   };
   
+  // Add new card to deck
   deck.push(card);
 };
+
+
+// API call to Pokemon API
+$.getJSON(url, function(data) {
+
+  // Generate a number between 1 & 150. 
+  for (var i = 0; i < 10; i++) {
+    num = Math.floor(Math.random() * 150) + 1;
+    
+    // Make a card for each number (10 cards total)
+    makeCard(num, data);  
+  } // end for
+  
+  console.log(deck);
+  
+});
+
 

@@ -1,4 +1,15 @@
 .credit img {
   max-width: 200px; }
 
+.card {
+  width: 20vw;
+  height: 20vw;
+  max-height: 15vh;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center; }
+  .card img {
+    display: block;
+    margin: 0 auto; }
+
 /*# sourceMappingURL=style.css.map */

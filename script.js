@@ -48,14 +48,12 @@ function makeGameBoard(array) {
     var placedCard = array.pop();
     var id = placedCard.pkmnID + 1;
     
+    // Build the cards
     var cardString = '<div class="card ' + id + '">' + placedCard.pkmnName + '<img src="' + placedCard.pkmnSprite + '" /></div>';
     
+    // place the card on the board
     $("#gameboard").append(cardString);
-    
-
   }
-  
-  
 };
 
 

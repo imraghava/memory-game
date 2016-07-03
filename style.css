@@ -2,14 +2,15 @@
   max-width: 200px; }
 
 .card {
-  width: 20vw;
-  height: 20vw;
-  max-height: 15vh;
+  width: 23.5vw;
+  height: 24vw;
+  max-height: 19vh;
   border: 1px solid black;
   display: inline-block;
   text-align: center; }
   .card img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    max-width: 90%; }
 
 /*# sourceMappingURL=style.css.map */
